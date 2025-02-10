@@ -2,7 +2,7 @@
 # Name Vincent Leahy
 # Date 1/30/2025
 # Sales Tax Programming Project
-# COSC 1010
+# COSC 2409 DNT
 #
 
 # Variable declarations
