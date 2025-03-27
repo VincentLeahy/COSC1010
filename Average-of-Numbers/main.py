@@ -19,17 +19,26 @@ for line in myfile:
 myfile.close()
 
 def main():
-    numbersFile = open('numbers.txt', 'r')
+    #Opening the file and running a IOError to handle any errors that arise and if no error reading the file itself. 
+    try:
+        myfile = open('numbers.txt', 'r')
+    except IOError as errorGenerated:
+        print('File not Found:', errorGenerated)
+    else:
+        total = 0
+        numberOfLines = 0
+        line = myfile.readline()
 
-    total = 0
-    numberOfLines = 0
-    line = numberFiles.readline()
+        while line != '':
+            numberOfLines += 1
 
-    while line != '':
-        numberOfLines += 1
-        total += int(line)
-        line = numbersFile.readline()
+             #adding number of total lines then next line reading next line.
+            total += int(line)
+            line = myfile.readline()
 
-    average = total / numberOfLines
+#Calculate the average
+        average = total / numberOfLines
 
-    print('The Average is', average)
+        print('The average is', average)
+
+main()
