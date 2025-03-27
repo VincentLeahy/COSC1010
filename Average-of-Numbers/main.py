@@ -28,6 +28,6 @@ def main():
         print('No numbers to calculate an average.')
 
     # Close the file after processing
-    myfile.close()
+    myfile.close() 
 
 main()
