@@ -17,4 +17,3 @@ for line in myfile:
 
 # Close File
 myfile.close()
-
