@@ -8,37 +8,26 @@
 
 # Open the file.
 
-myfile = open('numbers.txt', 'r')
-
-# Read and display the files contents.
-for line in myfile:
-    number = int(line)
-    print(number)
-
-# Close File
-myfile.close()
-
 def main():
-    #Opening the file and running a IOError to handle any errors that arise and if no error reading the file itself. 
-    try:
-        myfile = open('numbers.txt', 'r')
-    except IOError as errorGenerated:
-        print('File not Found:', errorGenerated)
-    else:
-        total = 0
-        numberOfLines = 0
-        line = myfile.readline()
+    # Open the file for reading.
+    myfile = open('numbers.txt', 'r')
 
-        while line != '':
-            numberOfLines += 1
+    total = 0
+    numberOfLines = 0
 
-             #adding number of total lines then next line reading next line.
-            total += int(line)
-            line = myfile.readline()
+    # Reading the file line by line. 
+    for line in myfile:
+        numberOfLines += 1
+        total += int(line)
 
-#Calculate the average
+    # Calculating the average of the numbers inside the file.
+    if numberOfLines > 0:
         average = total / numberOfLines
-
         print('The average is', average)
+    else:
+        print('No numbers to calculate an average.')
+
+    # Close the file after processing
+    myfile.close()
 
 main()
