@@ -1,0 +1,22 @@
+codes = {   'A': '%', 'a': '9', 'B': '@', 'b': '#', 'C': '&', 'c': '*',
+    'D': '(', 'd': ')', 'E': '1', 'e': '2', 'F': '3', 'f': '4',
+    'G': '5', 'g': '6', 'H': '7', 'h': '8', 'I': '{', 'i': '}',
+    'J': '[', 'j': ']', 'K': '<', 'k': '>', 'L': '/', 'l': '|',
+    'M': '$', 'm': '^', 'N': '~', 'n': '`', 'O': '-', 'o': '+',
+    'P': '=', 'p': '_', 'Q': '!', 'q': '?', 'R': ':', 'r': ';',
+    'S': ',', 's': '.', 'T': 'A', 't': 'B', 'U': 'C', 'u': 'D',
+    'V': 'E', 'v': 'F', 'W': 'G', 'w': 'H', 'X': 'I', 'x': 'J',
+    'Y': 'K', 'y': 'L', 'Z': 'M', 'z': 'N'}
+
+def decrypt_file(input_file):
+    with open(input_file, 'r') as f:
+        content = f.read()
+
+    decrypted_content = ''
+    for char in content:
+        if char in decode:
+            decrypted_content += decode[char]
+        else:
+            decrypted_content += char 
+
+    print(decrypted_content)
